@@ -9,6 +9,7 @@ description: 仕様駆動開発パイプライン(spec-new→spec-spec→spec-de
 
 ## 全体フロー
 
+0. プロジェクトに `.specs/PERSONAS.md` が無ければ、`spec-team` の実行をユーザーに一度提案する(必須ではない。断られた場合は暫定ロスターで進む)。
 1. `.specs/<slug>/` が未初期化なら `spec-new` を実行する。
 2. `spec-spec` を実行し、`spec.md` をユーザーに提示して **確定の同意を得る**(ゲート1)。
    - 同意が得られるまで次に進まない。
@@ -16,8 +17,8 @@ description: 仕様駆動開発パイプライン(spec-new→spec-spec→spec-de
    - 影響範囲が小さい・自明な変更の場合はユーザーの意向に応じて軽い確認で済ませてよい。
 4. `spec-tasks` を実行し、`tasks.md` をユーザーに提示して **確定の同意を得る**(ゲート3)。
 5. ゲート3通過後は、`spec-implement` → `spec-test` → `spec-review` → `spec-verify` を連続して実行する。ここから先は毎フェーズ確認を取らず進めてよいが、以下の場合は立ち止まってユーザーに報告・確認する:
-   - `spec-review` で重大な指摘が出た場合
-   - `spec-verify` で受け入れ基準の未達がある場合
+   - `spec-review` が**2ラウンド**を超えてもcritical/majorの指摘を解消できない場合(`spec-review`側で人間判断待ちとして打ち切られる)
+   - `spec-verify` で受け入れ基準の未達、またはproduct-ownerチェックで重大な懸念がある場合
    - 実装中に spec.md / design.md と矛盾する判断が必要になった場合
 6. `spec-verify` が合格したら `spec-retro` を実行してパイプラインを完了する。
 
