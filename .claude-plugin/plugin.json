@@ -1,0 +1,8 @@
+{
+  "name": "spec-driven-dev",
+  "version": "0.1.0",
+  "description": "仕様駆動開発(Spec-Driven Development)のパイプラインをSkillsとサブエージェントで実現するフレームワーク。要件定義→設計→タスク分解→実装→テスト→レビュー→受け入れ検証→振り返りまでを一貫して支援する。",
+  "author": {
+    "name": "USER"
+  }
+}
