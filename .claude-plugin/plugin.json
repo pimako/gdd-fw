@@ -1,7 +1,7 @@
 {
-  "name": "spec-driven-dev",
-  "version": "0.1.0",
-  "description": "仕様駆動開発(Spec-Driven Development)のパイプラインをSkillsとサブエージェントで実現するフレームワーク。要件定義→設計→タスク分解→実装→テスト→レビュー→受け入れ検証→振り返りまでを一貫して支援する。",
+  "name": "gate-driven-dev",
+  "version": "0.2.0",
+  "description": "Gate-Driven Development(GDD)のフレームワーク。プロジェクト(Inception)/イテレーション(計画・ふりかえり)/ストーリー(Design→Plan→Build→Test→Check)の3階層で、着手前に定義したGate条件(Gherkin Scenario)を完了時に検証する開発パイプラインをSkillsとペルソナ・サブエージェントで実現する。",
   "author": {
     "name": "USER"
   }

@@ -1,11 +1,11 @@
 ---
-name: spec-team
-description: プロジェクト単位でペルソナのロスター(.specs/PERSONAS.md)を設定・更新する。ユーザーが「レビューチームを決めたい」「ペルソナを設定したい」「/spec-team」と言った時に使う。spec-review/spec-verify/spec-discussが参照する土台。機能単位ではなくプロジェクト単位で一度設定すれば良い。
+name: gate-team
+description: プロジェクト単位でペルソナのロスター(.specs/PERSONAS.md)を設定・更新する。ユーザーが「レビューチームを決めたい」「ペルソナを設定したい」「/gate-team」と言った時に使う。gate-design/gate-check/gate-discussが参照する土台。ストーリー単位ではなくプロジェクト単位で一度設定すれば良い。
 ---
 
-# spec-team — ペルソナロスターの設定
+# gate-team — ペルソナロスターの設定
 
-`personas/`(プラグイン同梱のライブラリ)から、このプロジェクトで実際に使うペルソナを選び、`.specs/PERSONAS.md` に記録する。機能ごとではなく、プロジェクトに対して一度設定すれば、以後の `spec-review` `spec-verify` `spec-discuss` が自動的に参照する。
+`personas/`(プラグイン同梱のライブラリ)から、このプロジェクトで実際に使うペルソナを選び、`.specs/PERSONAS.md` に記録する。ストーリーごとではなく、プロジェクトに対して一度設定すれば、以後の `gate-design` `gate-check` `gate-discuss` が自動的に参照する。
 
 ## 手順
 
@@ -41,7 +41,7 @@ description: プロジェクト単位でペルソナのロスター(.specs/PERSO
    <ISO日付>
 
    ## 備考
-   ロスターを見直したい場合は `/spec-team` を再実行してください。
+   ロスターを見直したい場合は `/gate-team` を再実行してください。
    ```
 
 7. 設定内容をユーザーに要約して提示する。
